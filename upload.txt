@@ -1,0 +1,9 @@
+直连设置：
+
+1、服务端：
+去掉：<dubbo:registry address="192.168.42.129:2181" protocol="zookeeper"/>
+添加：<!-- <dubbo:registry address="N/A" /> -->
+2、消费者：
+去掉：<dubbo:registry address="zookeeper://192.168.42.129:2181"/>
+添加：<!-- <dubbo:registry address="N/A"/> -->
+添加：在节点dubbo:reference中添加属性：url="dubbo://192.168.42.129:20880/cn.com.core.service.TestTbService"
